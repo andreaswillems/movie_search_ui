@@ -1,0 +1,10 @@
+<div class="columns">
+  <div class="column is-4 is-offset-4">
+  <%= live_render(@conn, MovieSearchUiWeb.MovieListLive.Search) %>
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
+  <%= live_render(@conn, MovieSearchUiWeb.MovieListLive.Index) %>
+  </div>
+</div>

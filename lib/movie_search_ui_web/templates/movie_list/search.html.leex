@@ -1,0 +1,10 @@
+<form action="#" phx-submit="search">
+  <div class="field has-addons">
+    <div class="control is-expanded">
+      <%= text_input :search_args, :query, class: "input", placeholder: "Enter movie title etc." %>
+    </div>
+    <div class="control">
+      <%= submit "Search", phx_disable_with: "Searching...", class: "button is-link" %>
+    </div>
+  </div>
+</form>

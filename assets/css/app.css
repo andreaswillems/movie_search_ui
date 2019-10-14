@@ -1,0 +1,10 @@
+/* This file is for your main application css. */
+
+/* @import "./phoenix.css"; */
+@import "../node_modules/bulma/css/bulma.min.css";
+@import "../../deps/phoenix_live_view/assets/css/live_view.css";
+
+.card:hover {
+  /* box-shadow: 2px 2px 10px 2px gray; */
+  box-shadow: 2px 3px 20px 2px rgba(0, 0, 0, 0.3);
+}

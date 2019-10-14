@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MovieSearchUi · OMDB Client</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar is-link is-spaced" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <!--<img src="<%= Routes.static_path(@conn, "/images/logo.png") %>" alt="Andreas Willems Logo" width=112 height=56/>-->
+              <h1 class="title has-text-white">Movie Search UI</h1>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-menu">
+            <!-- navbar start, navbar end -->
+            <div class="navbar-end">
+              <a class="navbar-item" href="http://www.omdbapi.com">OMDB API Docs</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="section">
+      <div role="main" class="container">
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= render @view_module, @view_template, assigns %>
+    </div>
+    </section>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
